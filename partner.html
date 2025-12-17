@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycle Bin - Manage your waste</title>
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="lib/aos/dist/aos.css">
+
+    <!-- Boxicons CSS -->
+    <link rel="stylesheet" href="lib/boxicons/css/boxicons.css">
+
+    <!-- Swiperjs -->
+    <link rel="stylesheet" href="lib/swiperjs/swiper-bundle.min.css" />
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-white overflow-y-scroll [&::-webkit-scrollbar]:w-2
+    [&::-webkit-scrollbar-track]:bg-gray-300
+    [&::-webkit-scrollbar-thumb]:bg-emerald-500">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100" data-aos="fade">
+        <div class="max-w-[74rem] mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <div class="overflow-hidden">
+                    <div class="flex items-center gap-2" data-aos="fade-up">
+                        <img src="img/logotext.svg" class=" h-12">
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center gap-8 overflow-hidden">
+                    <div data-aos="fade-down" data-aos-delay="200">
+                        <a href="index.html"
+                            class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-all ease-in duration-150">Home</a>
+                    </div>
+                    <div data-aos="fade-down" data-aos-delay="400">
+                        <a href="about.html"
+                            class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-all ease-in duration-150">About
+                            Us</a>
+                    </div>
+                    <div data-aos="fade-down" data-aos-delay="600">
+                        <a href="location.html"
+                            class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-all ease-in duration-150">Location</a>
+                    </div>
+                    <div data-aos="fade-down" data-aos-delay="800">
+                        <a href="product.html"
+                            class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-all ease-in duration-150">Products</a>
+                    </div>
+                    <div data-aos="fade-down" data-aos-delay="1000">
+                        <a href="partner.html"
+                            class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-all ease-in duration-150">Partners</a>
+                    </div>
+                    <div data-aos="fade-down" data-aos-delay="1200">
+                        <a href="contact.html"
+                            class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-all ease-in duration-150">Contact
+                            Us</a>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center gap-4 h-max overflow-hidden">
+                    <span data-aos="fade-up">
+                        <a href="login.html"
+                            class="text-sm font-medium text-gray-500 px-5 py-2.5 hover:text-gray-900 transition-all ease-in duration-150">
+                            Login
+                        </a>
+                    </span>
+                    <span data-aos="fade-up" data-aos-delay="200">
+                        <a href="register.html"
+                            class="inline-block text-sm font-medium bg-emerald-500 text-white px-6 py-2.5 rounded-xl hover:bg-emerald-600 transition-all ease-in duration-150">
+                            Get Started
+                        </a>
+                    </span>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 overflow-hidden">
+                    <div id="menu-icon" data-aos="fade-down">
+                        <i class='bx bx-menu text-4xl'></i>
+                    </div>
+                    <div id="close-icon" class="hidden">
+                        <i class='bx bx-x text-4xl' id=""></i>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white">
+            <div class="px-6 py-6 space-y-4">
+                <a href="index.html" class="block text-sm font-medium text-gray-500">Home</a>
+                <a href="about.html" class="block text-sm font-medium text-gray-500">About Us</a>
+                <a href="location.html" class="block text-sm font-medium text-gray-500">Location</a>
+                <a href="services.html" class="block text-sm font-medium text-gray-500">Services & Products</a>
+                <a href="contact.html" class="block text-sm font-medium text-gray-500">Contact Us</a>
+                <div class="pt-4 space-y-3">
+                    <a href="login.html"
+                        class="inline-block text-center w-full text-sm font-medium text-gray-700 px-5 py-2.5 border border-gray-200 rounded-xl">
+                        Login
+                    </a>
+                    <a href="register.html"
+                        class="inline-block text-center w-full text-sm font-medium bg-emerald-500 text-white px-6 py-2.5 rounded-xl">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative w-full h-screen min-h-[600px] flex items-center overflow-hidden">
+
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="/vid/video.mp4" type="video/mp4">
+            Browser Anda tidak mendukung tag video.
+        </video>
+
+        <div class="absolute inset-0 bg-black/80 z-10"></div>
+
+        <div class="relative z-20 w-full max-w-[74rem] px-6 mx-auto h-full flex flex-col justify-center md:px-0">
+
+            <div class="max-w-3xl">
+                <div data-aos="fade" data-aos-delay="300"
+                    class="inline-block px-4 py-1.5 bg-emerald-50 text-emerald-700 text-sm font-medium rounded-full mb-4">
+                    Partners
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-6" data-aos="fade-up">
+                    Make <span class="text-emerald-400">Indonesia Clean</span><br>
+                    From Waste
+                </h1>
+
+                <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-xl leading-relaxed" data-aos="fade-up"
+                    data-aos-delay="100">
+                    Join us as a partner to help reduce waste in Indonesia.
+                </p>
+
+                <button data-aos="fade-up" data-aos-delay="200"
+                    class="group flex items-center gap-3 px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full font-semibold transition-all duration-300 transform hover:-translate-y-1">
+                    <span>Become a Partner</span>
+                    <i class='bx bx-right-arrow-alt text-2xl group-hover:translate-x-1 transition-transform'></i>
+                </button>
+            </div>
+
+            <div class="absolute left-6 right-6 bottom-10 max-w-[74rem] mx-auto md:left-0 md:right-0" data-aos="fade-in"
+                data-aos-delay="400">
+                <div class="flex flex-wrap gap-8 md:gap-16 border-t border-gray-700/50 pt-8">
+
+                    <div>
+                        <h4 class="text-white font-bold text-xl md:text-2xl">5,000+</h4>
+                        <p class="text-gray-400 text-sm">Customers</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-bold text-xl md:text-2xl">10K+</h4>
+                        <p class="text-gray-400 text-sm">Tons Recycled</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-bold text-xl md:text-2xl">100%</h4>
+                        <p class="text-gray-400 text-sm">Eco-Friendly</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="pt-32 py-20 px-6">
+        <div class="max-w-[74rem] mx-auto">
+
+            <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2 overflow-hidden" data-aos="fade-up">
+                    Our Partners
+                </h2>
+            </div>
+            <div class="relative mt-5 md:mt-10">
+                <div class="swiper partnersSwiper overflow-hidden">
+                    <div class="swiper-wrapper items-center pb-4">
+                        <!-- Partner 1 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="group bg-white rounded-2xl shadow-lg border border-gray-100 hover:border-emerald-500 transition-all ease-in duration-150 h-24 md:h-30 flex items-center justify-center group">
+                                <div class="flex justify-center items-center h-full p-3 md:py-5">
+                                    <img src="img/partner-1.png" alt="Pesona Plastik Logo"
+                                        class="w-full h-full mx-auto md:grayscale-100 group-hover:grayscale-0 transition-all ease-in duration-150">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Partner 2 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="group bg-white rounded-2xl shadow-lg border border-gray-100 hover:border-emerald-500 transition-all ease-in duration-150 h-24 md:h-30 flex items-center justify-center group">
+                                <div class="flex justify-center items-center h-full p-3 md:py-5">
+                                    <img src="img/partner-2.png" alt="Bank BUMN Logo"
+                                        class="w-full h-full mx-auto md:grayscale-100 group-hover:grayscale-0 transition-all ease-in duration-150">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Partner 3 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="group bg-white rounded-2xl shadow-lg border border-gray-100 hover:border-emerald-500 transition-all ease-in duration-150 h-24 md:h-30 flex items-center justify-center group">
+                                <div class="flex justify-center items-center h-full p-3 md:py-5">
+                                    <img src="img/partner-3.png" alt="ROLE Foundation Logo"
+                                        class="w-full h-full mx-auto md:grayscale-100 group-hover:grayscale-0 transition-all ease-in duration-150">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Partner 4 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="group bg-white rounded-2xl shadow-lg border border-gray-100 hover:border-emerald-500 transition-all ease-in duration-150 h-24 md:h-30 flex items-center justify-center group">
+                                <div class="flex justify-center items-center h-full p-3 md:py-5">
+                                    <img src="img/partner-4.png" alt="WWF Logo"
+                                        class="w-full h-full mx-auto md:grayscale-100 group-hover:grayscale-0 transition-all ease-in duration-150">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Partner 5 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="group bg-white rounded-2xl shadow-lg border border-gray-100 hover:border-emerald-500 transition-all ease-in duration-150 h-24 md:h-30 flex items-center justify-center group">
+                                <div class="flex justify-center items-center h-full p-3 md:py-5">
+                                    <img src="img/partner-5.png" alt="UNEP Logo"
+                                        class="w-full h-full mx-auto md:grayscale-100 group-hover:grayscale-0 transition-all ease-in duration-150">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative mt-5 md:mt-10">
+                <div class="swiper partnersSwiper2 overflow-hidden">
+                    <div class="swiper-wrapper items-center pb-4">
+                        <!-- Partner 6 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="group bg-white rounded-2xl shadow-lg border border-gray-100 hover:border-emerald-500 transition-all ease-in duration-150 h-24 md:h-30 flex items-center justify-center group">
+                                <div class="flex justify-center items-center h-full p-3 md:py-5">
+                                    <img src="img/partner-1.png" alt="Pesona Plastik Logo"
+                                        class="w-full h-full mx-auto md:grayscale-100 group-hover:grayscale-0 transition-all ease-in duration-150">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Partner 7 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="group bg-white rounded-2xl shadow-lg border border-gray-100 hover:border-emerald-500 transition-all ease-in duration-150 h-24 md:h-30 flex items-center justify-center group">
+                                <div class="flex justify-center items-center h-full p-3 md:py-5">
+                                    <img src="img/partner-2.png" alt="Bank BUMN Logo"
+                                        class="w-full h-full mx-auto md:grayscale-100 group-hover:grayscale-0 transition-all ease-in duration-150">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Partner 8 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="group bg-white rounded-2xl shadow-lg border border-gray-100 hover:border-emerald-500 transition-all ease-in duration-150 h-24 md:h-30 flex items-center justify-center group">
+                                <div class="flex justify-center items-center h-full p-3 md:py-5">
+                                    <img src="img/partner-3.png" alt="ROLE Foundation Logo"
+                                        class="w-full h-full mx-auto md:grayscale-100 group-hover:grayscale-0 transition-all ease-in duration-150">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Partner 9 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="group bg-white rounded-2xl shadow-lg border border-gray-100 hover:border-emerald-500 transition-all ease-in duration-150 h-24 md:h-30 flex items-center justify-center group">
+                                <div class="flex justify-center items-center h-full p-3 md:py-5">
+                                    <img src="img/partner-4.png" alt="WWF Logo"
+                                        class="w-full h-full mx-auto md:grayscale-100 group-hover:grayscale-0 transition-all ease-in duration-150">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Partner 10 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="group bg-white rounded-2xl shadow-lg border border-gray-100 hover:border-emerald-500 transition-all ease-in duration-150 h-24 md:h-30 flex items-center justify-center group">
+                                <div class="flex justify-center items-center h-full p-3 md:py-5">
+                                    <img src="img/partner-5.png" alt="UNEP Logo"
+                                        class="w-full h-full mx-auto md:grayscale-100 group-hover:grayscale-0 transition-all ease-in duration-150">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="bg-gradient-to-b from-white to-emerald-50/30 pt-20 pb-8 px-6">
+        <div class="max-w-[74rem] mx-auto">
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+
+                <!-- Company Info -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <img src="img/logotext.svg" class="h-12 rounded-xl">
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Turning waste into blessings through sustainable waste management and quality recycled products.
+                    </p>
+
+                    <!-- Social Media -->
+                    <div class="flex items-center gap-3">
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-all ease-in duration-150 group">
+                            <i class='bx bxl-facebook text-xl text-gray-600 group-hover:text-white'></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-all ease-in duration-150 group">
+                            <i class='bx bxl-instagram text-xl text-gray-600 group-hover:text-white'></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-all ease-in duration-150 group">
+                            <i class='bx bxl-twitter text-xl text-gray-600 group-hover:text-white'></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-all ease-in duration-150 group">
+                            <i class='bx bxl-linkedin text-xl text-gray-600 group-hover:text-white'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="index.html"
+                                class="text-gray-600 hover:text-emerald-600 transition-all ease-in duration-150 flex items-center gap-2">
+                                <i class='bx bx-chevron-right text-emerald-500'></i>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html"
+                                class="text-gray-600 hover:text-emerald-600 transition-all ease-in duration-150 flex items-center gap-2">
+                                <i class='bx bx-chevron-right text-emerald-500'></i>
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product.html"
+                                class="text-gray-600 hover:text-emerald-600 transition-all ease-in duration-150 flex items-center gap-2">
+                                <i class='bx bx-chevron-right text-emerald-500'></i>
+                                Products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="partner.html"
+                                class="text-gray-600 hover:text-emerald-600 transition-all ease-in duration-150 flex items-center gap-2">
+                                <i class='bx bx-chevron-right text-emerald-500'></i>
+                                Partners
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html"
+                                class="text-gray-600 hover:text-emerald-600 transition-all ease-in duration-150 flex items-center gap-2">
+                                <i class='bx bx-chevron-right text-emerald-500'></i>
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-4">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#"
+                                class="text-gray-600 hover:text-emerald-600 transition-all ease-in duration-150 flex items-center gap-2">
+                                <i class='bx bx-chevron-right text-emerald-500'></i>
+                                Waste Pickup
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-600 hover:text-emerald-600 transition-all ease-in duration-150 flex items-center gap-2">
+                                <i class='bx bx-chevron-right text-emerald-500'></i>
+                                Sorting & Processing
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-600 hover:text-emerald-600 transition-all ease-in duration-150 flex items-center gap-2">
+                                <i class='bx bx-chevron-right text-emerald-500'></i>
+                                Recycled Products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-600 hover:text-emerald-600 transition-all ease-in duration-150 flex items-center gap-2">
+                                <i class='bx bx-chevron-right text-emerald-500'></i>
+                                Partnership Program
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="text-gray-600 hover:text-emerald-600 transition-all ease-in duration-150 flex items-center gap-2">
+                                <i class='bx bx-chevron-right text-emerald-500'></i>
+                                Education & Training
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-4">Contact Info</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div
+                                class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class='bx bxs-map text-emerald-600 text-xl'></i>
+                            </div>
+                            <div>
+                                <a href="#"
+                                    class="text-sm text-gray-600 hover:text-emerald-600 transition-all ease-in duration-150">
+                                    Jl. Tukad Badung No.135<br>
+                                    Denpasar Selatan, 80226
+                                </a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div
+                                class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class='bx bxs-phone text-emerald-600 text-xl'></i>
+                            </div>
+                            <div>
+                                <a href="#"
+                                    class="text-sm text-gray-600 hover:text-emerald-600 transition-all ease-in duration-150">
+                                    +62 812 3456 7890
+                                </a>
+                                <br>
+                                <a href="#"
+                                    class="text-sm text-gray-600 hover:text-emerald-600 transition-all ease-in duration-150">
+                                    +62 21 1234 5678
+                                </a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div
+                                class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class='bx bxs-envelope text-emerald-600 text-xl'></i>
+                            </div>
+                            <div>
+                                <a href="#"
+                                    class="text-sm text-gray-600 hover:text-emerald-600 transition-all ease-in duration-150">
+                                    info@recyclebin.id
+                                </a>
+                                <a href="#"
+                                    class="text-sm text-gray-600 hover:text-emerald-600 transition-all ease-in duration-150">
+                                    support@recyclebin.id
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Newsletter Section -->
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 mb-12">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Subscribe to Our Newsletter</h3>
+                        <p class="text-gray-600">Get the latest updates on sustainable living and exclusive offers</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <input type="email" placeholder="Enter your email"
+                            class="flex-1 px-6 py-3 border border-gray-200 rounded-xl focus:outline-none focus:border-emerald-500 transition-all ease-in duration-150">
+                        <button
+                            class="bg-emerald-500 text-white px-8 py-3 rounded-xl font-medium hover:bg-emerald-600 transition-all ease-in duration-150 whitespace-nowrap cursor-pointer">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-200 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-sm text-gray-600 text-center md:text-left">
+                        © 2025 Recycle Bin. All rights reserved.
+                    </p>
+                    <div class="flex items-center gap-6">
+                        <a href="#"
+                            class="text-sm text-gray-600 hover:text-emerald-600 transition-all ease-in duration-150">
+                            Privacy Policy
+                        </a>
+                        <a href="#"
+                            class="text-sm text-gray-600 hover:text-emerald-600 transition-all ease-in duration-150">
+                            Terms of Service
+                        </a>
+                        <a href="#"
+                            class="text-sm text-gray-600 hover:text-emerald-600 transition-all ease-in duration-150">
+                            Cookie Policy
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation JS -->
+    <script src="lib/aos/dist/aos.js"></script>
+    <script src="js/aos.js"></script>
+
+    <!-- Swiperjs -->
+    <script src="lib/swiperjs/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+
+    <!-- Mobile Navbar JS -->
+    <script src="js/mobile-navbar.js"></script>
+</body>
+
+</html>
