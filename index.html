@@ -36,15 +36,15 @@
         <div class="max-w-[74rem] mx-auto px-6">
             <div class="flex justify-between items-center h-20">
                 <div class="overflow-hidden">
-                    <div class="flex items-center gap-2" data-aos="fade-up">
-                        <img src="img/logotext.svg" class=" h-12">
-                    </div>
+                    <a href="index.html" class="flex items-center gap-2" data-aos="fade-up">
+                        <img src="img/logotext.svg" class="h-12" alt="Recycle Bin">
+                    </a>
                 </div>
 
                 <div class="hidden md:flex items-center gap-8 overflow-hidden">
                     <div data-aos="fade-down" data-aos-delay="200">
                         <a href="index.html"
-                            class="text-sm font-medium text-gray-500 hover:text-gray-900 transition-all ease-in duration-150">Home</a>
+                            class="text-sm font-medium text-gray-900 hover:text-gray-900 transition-all ease-in duration-150">Home</a>
                     </div>
                     <div data-aos="fade-down" data-aos-delay="400">
                         <a href="about.html"
@@ -90,7 +90,7 @@
                         <i class='bx bx-menu text-4xl'></i>
                     </div>
                     <div id="close-icon" class="hidden">
-                        <i class='bx bx-x text-4xl' id=""></i>
+                        <i class='bx bx-x text-4xl'></i>
                     </div>
                 </button>
             </div>
@@ -98,10 +98,11 @@
 
         <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white">
             <div class="px-6 py-6 space-y-4">
-                <a href="index.html" class="block text-sm font-medium text-gray-500">Home</a>
+                <a href="index.html" class="block text-sm font-medium text-gray-900">Home</a>
                 <a href="about.html" class="block text-sm font-medium text-gray-500">About Us</a>
                 <a href="location.html" class="block text-sm font-medium text-gray-500">Location</a>
-                <a href="services.html" class="block text-sm font-medium text-gray-500">Services & Products</a>
+                <a href="product.html" class="block text-sm font-medium text-gray-500">Products</a>
+                <a href="partner.html" class="block text-sm font-medium text-gray-500">Partners</a>
                 <a href="contact.html" class="block text-sm font-medium text-gray-500">Contact Us</a>
                 <div class="pt-4 space-y-3">
                     <a href="login.html"
@@ -333,10 +334,8 @@
                         <p class="text-gray-600 mb-6 leading-relaxed" data-aos-anchor="#about-content"
                             data-aos="fade-down" data-aos-delay="500">
                             Recycle Bin is a subscription-based waste management service designed for modern urban
-                            living.
-                            We collect mixed waste directly from your location, then professionally sort and process it
-                            at
-                            our dedicated facilities, so you don’t have to.
+                            lifestyles. We collect all your mixed waste, then professionally separate and process it at
+                            our specialized facilities, so you don't have to.
                         </p>
                     </div>
 
@@ -349,9 +348,9 @@
                                 <i class='bx bx-check text-emerald-600'></i>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-gray-900">Scheduled Smart Pickup</h4>
+                                <h4 class="font-semibold text-gray-900">Zero Hassle</h4>
                                 <p class="text-sm text-gray-600">
-                                    Regular and reliable pickup based on your subscription plan.
+                                    Customers don't have to bother sorting their waste.
                                 </p>
                             </div>
                         </div>
@@ -363,9 +362,9 @@
                                 <i class='bx bx-check text-emerald-600'></i>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-gray-900">Professional Waste Sorting</h4>
+                                <h4 class="font-semibold text-gray-900">Premium Facility</h4>
                                 <p class="text-sm text-gray-600">
-                                    All waste is sorted by trained staff at our processing hubs.
+                                    A fragrant, well-organized disposal location supervised by staff.
                                 </p>
                             </div>
                         </div>
@@ -377,9 +376,9 @@
                                 <i class='bx bx-check text-emerald-600'></i>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-gray-900">Zero-Effort for Customers</h4>
+                                <h4 class="font-semibold text-gray-900">Circular Economy</h4>
                                 <p class="text-sm text-gray-600">
-                                    No sorting, no complicated steps, just throw and relax.
+                                    Customer waste is guaranteed to be recycled, not just piled up in landfills.
                                 </p>
                             </div>
                         </div>
@@ -443,144 +442,198 @@
                     </p>
                 </div>
             </div>
-
             <!-- Pricing Grid -->
             <div class="grid md:grid-cols-3 gap-8">
 
-                <!-- Eco Lite Plan -->
+                <!-- Budget Package -->
                 <div data-aos="fade-up" data-aos-delay="200">
                     <div
                         class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition-all ease-in duration-150 group h-full flex flex-col hover:border-emerald-500">
 
                         <div class="mb-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Eco Lite</h3>
-                            <p class="text-gray-600 text-sm mb-4">Best for students & small living spaces</p>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Budget Package</h3>
+                            <p class="text-gray-600 text-sm mb-4">Ideal for boarding house residents or small households
+                            </p>
                             <div class="flex items-baseline gap-1">
-                                <span class="text-4xl font-bold text-gray-900">Rp 50K</span>
+                                <span class="text-4xl font-bold text-gray-900">Rp 25K</span>
                                 <span class="text-gray-600">/month</span>
                             </div>
                         </div>
 
                         <ul class="space-y-3 mb-8 flex-grow">
                             <li class="flex items-start gap-2 text-sm text-gray-600">
-                                <i class='bx bx-check text-emerald-600 text-[1.2rem]'></i>
-                                <span>Pickup once a week (4x/month)</span>
+                                <i class='bx bx-user text-emerald-600 text-[1.2rem]'></i>
+                                <span><strong>Target:</strong> Individuals / Boarding House</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <i class='bx bx-calendar text-emerald-600 text-[1.2rem]'></i>
+                                <span><strong>Quota:</strong> 4 pickups per month</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <i class='bx bx-package text-emerald-600 text-[1.2rem]'></i>
+                                <span><strong>Volume:</strong> 20L bag (50x75cm)</span>
                             </li>
                             <li class="flex items-start gap-2 text-sm text-gray-600">
                                 <i class='bx bx-check text-emerald-600 text-[1.2rem]'></i>
-                                <span>Max 2 polybags (50L) per pickup</span>
+                                <span>1 bag per pickup</span>
                             </li>
                             <li class="flex items-start gap-2 text-sm text-gray-600">
-                                <i class='bx bx-check text-emerald-600 text-[1.2rem]'></i>
-                                <span>No sorting required (we handle it)</span>
-                            </li>
-                            <li class="flex items-start gap-2 text-sm text-gray-600">
-                                <i class='bx bx-plus-circle text-emerald-600 text-[1.2rem]'></i>
-                                <span>Add-on: Express Pickup (+Rp 35K / request)</span>
+                                <i class='bx bx-info-circle text-emerald-600 text-[1.2rem]'></i>
+                                <span class="text-xs italic">Equivalent to 1 standard kitchen trash bag</span>
                             </li>
                         </ul>
 
                         <button
                             class="w-full bg-emerald-50 text-emerald-700 px-6 py-3 rounded-xl font-medium hover:bg-emerald-500 hover:text-white transition-all ease-in duration-150 cursor-pointer">
-                            Choose Eco Lite
+                            Choose Budget Package
                         </button>
                     </div>
                 </div>
 
-                <!-- Eco Family Plan (Featured) -->
+                <!-- Family Package (Featured) -->
                 <div data-aos="fade-up" data-aos-delay="400">
                     <div
                         class="bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl shadow-2xl border-2 border-emerald-400 p-8 hover:shadow-2xl transition-all ease-in duration-150 h-full flex flex-col relative overflow-hidden">
 
-                        <!-- Popular Badge -->
+                        <!-- Best Seller Badge -->
                         <div
                             class="absolute top-4 right-4 bg-white text-emerald-600 px-3 py-1 rounded-full text-xs font-bold">
                             BEST SELLER
                         </div>
 
                         <div class="mb-6">
-                            <h3 class="text-xl font-bold text-white mb-2">Eco Family</h3>
-                            <p class="text-emerald-100 text-sm mb-4">Perfect for active households</p>
+                            <h3 class="text-xl font-bold text-white mb-2">Family Package</h3>
+                            <p class="text-emerald-100 text-sm mb-4">Perfect for households with daily waste</p>
                             <div class="flex items-baseline gap-1">
-                                <span class="text-4xl font-bold text-white">Rp 100K</span>
+                                <span class="text-4xl font-bold text-white">Rp 50K</span>
                                 <span class="text-emerald-100">/month</span>
                             </div>
                         </div>
 
                         <ul class="space-y-3 mb-8 flex-grow">
                             <li class="flex items-start gap-2 text-sm text-white">
-                                <i class='bx bx-check text-white text-[1.2rem]'></i>
-                                <span>Pickup twice a week (8x/month)</span>
+                                <i class='bx bx-home-heart text-white text-[1.2rem]'></i>
+                                <span><strong>Target:</strong> Households</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-white">
+                                <i class='bx bx-infinite text-white text-[1.2rem]'></i>
+                                <span><strong>Quota:</strong> Unlimited (Daily pickups)</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-white">
+                                <i class='bx bx-package text-white text-[1.2rem]'></i>
+                                <span><strong>Volume:</strong> 50L bag (60x100cm)</span>
                             </li>
                             <li class="flex items-start gap-2 text-sm text-white">
                                 <i class='bx bx-check text-white text-[1.2rem]'></i>
-                                <span>Max 3 polybags per pickup</span>
+                                <span>Maximum 2 bags per day</span>
                             </li>
                             <li class="flex items-start gap-2 text-sm text-white">
-                                <i class='bx bx-check text-white text-[1.2rem]'></i>
-                                <span>Free aesthetic recycle bin box</span>
-                            </li>
-                            <li class="flex items-start gap-2 text-sm text-white">
-                                <i class='bx bx-check text-white text-[1.2rem]'></i>
-                                <span>No sorting required (we handle it)</span>
-                            </li>
-                            <li class="flex items-start gap-2 text-sm text-white">
-                                <i class='bx bx-plus-circle text-white text-[1.2rem]'></i>
-                                <span>Add-on: Express Pickup (+Rp 35K / request)</span>
+                                <i class='bx bx-info-circle text-white text-[1.2rem]'></i>
+                                <span class="text-xs italic">Standard large black supermarket trash bag</span>
                             </li>
                         </ul>
 
                         <button
                             class="w-full bg-white text-emerald-600 px-6 py-3 rounded-xl font-medium hover:bg-emerald-50 transition-all ease-in duration-150 cursor-pointer">
-                            Choose Eco Family
+                            Choose Family Package
                         </button>
                     </div>
                 </div>
 
-                <!-- Eco Business Plan -->
+                <!-- Business Partner Package -->
                 <div data-aos="fade-up" data-aos-delay="600">
                     <div
                         class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition-all ease-in duration-150 group h-full flex flex-col hover:border-emerald-500">
 
                         <div class="mb-6">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Eco Business</h3>
-                            <p class="text-gray-600 text-sm mb-4">Designed for cafés & small businesses</p>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Business Partner Package</h3>
+                            <p class="text-gray-600 text-sm mb-4">Ideal for food stalls, cafés, and small businesses</p>
                             <div class="flex items-baseline gap-1">
-                                <span class="text-4xl font-bold text-gray-900">Rp 350K</span>
+                                <span class="text-4xl font-bold text-gray-900">Rp 150K</span>
                                 <span class="text-gray-600">/month</span>
                             </div>
                         </div>
 
                         <ul class="space-y-3 mb-8 flex-grow">
                             <li class="flex items-start gap-2 text-sm text-gray-600">
-                                <i class='bx bx-check text-emerald-600 text-[1.2rem]'></i>
-                                <span>Pickup 3x a week (12x/month)</span>
+                                <i class='bx bx-store text-emerald-600 text-[1.2rem]'></i>
+                                <span><strong>Target:</strong> Shops / Cafés / MSMEs</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <i class='bx bx-infinite text-emerald-600 text-[1.2rem]'></i>
+                                <span><strong>Quota:</strong> Unlimited</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <i class='bx bx-package text-emerald-600 text-[1.2rem]'></i>
+                                <span><strong>Volume:</strong> 100L bag (90x120cm)</span>
                             </li>
                             <li class="flex items-start gap-2 text-sm text-gray-600">
                                 <i class='bx bx-check text-emerald-600 text-[1.2rem]'></i>
-                                <span>Large volume (up to 240L wheeled bin)</span>
+                                <span>Maximum 1 jumbo bag per day</span>
                             </li>
                             <li class="flex items-start gap-2 text-sm text-gray-600">
-                                <i class='bx bx-check text-emerald-600 text-[1.2rem]'></i>
-                                <span>“Green Business Partner” certificate</span>
-                            </li>
-                            <li class="flex items-start gap-2 text-sm text-gray-600">
-                                <i class='bx bx-check text-emerald-600 text-[1.2rem]'></i>
-                                <span>No sorting required (we handle it)</span>
-                            </li>
-                            <li class="flex items-start gap-2 text-sm text-gray-600">
-                                <i class='bx bx-plus-circle text-emerald-600 text-[1.2rem]'></i>
-                                <span>Add-on: Express Pickup (+Rp 35K / request)</span>
+                                <i class='bx bx-info-circle text-emerald-600 text-[1.2rem]'></i>
+                                <span class="text-xs italic">Jumbo trash bag for gardens or restaurants</span>
                             </li>
                         </ul>
 
                         <button
                             class="w-full bg-emerald-50 text-emerald-700 px-6 py-3 rounded-xl font-medium hover:bg-emerald-500 hover:text-white transition-all ease-in duration-150 cursor-pointer">
-                            Contact Sales
+                            Contact Us
                         </button>
                     </div>
                 </div>
             </div>
+
+            <!-- Add-on Section -->
+            <div class="mt-12 w-full" data-aos="fade-up" data-aos-delay="800">
+                <div
+                    class="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl border-2 border-emerald-300 p-8 mx-auto shadow-lg">
+                    <div class="flex flex-col md:flex-row items-start gap-4">
+                        <div class="bg-emerald-500 text-white rounded-full p-3 flex-shrink-0">
+                            <i class='bx bx-rocket text-2xl'></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Add-On: Express Pickup</h3>
+                            <p class="text-emerald-700 font-semibold text-lg mb-4">Rp 35,000 / pickup</p>
+                            <p class="text-gray-700 mb-4">
+                                <strong>Target:</strong> Customers with urgent waste needs (After events / Moving /
+                                Emergency)
+                            </p>
+
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="space-y-2">
+                                    <div class="flex items-start gap-2 text-sm text-gray-700">
+                                        <i class='bx bx-timer text-emerald-600 text-[1.2rem]'></i>
+                                        <span>Instant pickup (Max 3 hours to location)</span>
+                                    </div>
+                                    <div class="flex items-start gap-2 text-sm text-gray-700">
+                                        <i class='bx bx-car text-emerald-600 text-[1.2rem]'></i>
+                                        <span>Three-wheel motor vehicle (Accessible for narrow streets)</span>
+                                    </div>
+                                </div>
+                                <div class="space-y-2">
+                                    <div class="flex items-start gap-2 text-sm text-gray-700">
+                                        <i class='bx bx-package text-emerald-600 text-[1.2rem]'></i>
+                                        <span>Maximum 5 large bags (100L) or 100 kg</span>
+                                    </div>
+                                    <div class="flex items-start gap-2 text-sm text-gray-700">
+                                        <i class='bx bx-camera text-emerald-600 text-[1.2rem]'></i>
+                                        <span>Photo of waste is required</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 bg-white rounded-lg p-3 border border-emerald-200">
+                                <p class="text-sm text-gray-600">
+                                    <strong>Note:</strong> Overload will be charged Rp 10,000 per additional bag
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -610,7 +663,7 @@
             <!-- Services Grid -->
             <div class="grid md:grid-cols-3 gap-8">
 
-                <!-- Service 1 - Subscription Pickup -->
+                <!-- Service 1 - Membership Access -->
                 <div data-aos="fade-up" data-aos-delay="200">
                     <div
                         class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition-all ease-in duration-150 group h-full flex flex-col justify-between hover:border-emerald-500">
@@ -618,38 +671,39 @@
                         <div
                             class="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-emerald-500 transition-all ease-in duration-150">
                             <i
-                                class='bx bxs-truck text-3xl text-emerald-600 group-hover:text-white transition-all ease-in duration-150'></i>
+                                class='bx bxs-id-card text-3xl text-emerald-600 group-hover:text-white transition-all ease-in duration-150'></i>
                         </div>
 
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Subscription Waste Pickup</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Membership Access</h3>
                         <p class="text-gray-600 mb-6 leading-relaxed">
-                            Schedule regular waste pickups through monthly plans. No sorting required, just leave it to
-                            us.
+                            Join our exclusive network of smart drop-off stations. Simply subscribe monthly, scan the QR
+                            code, and
+                            dispose of your trash hassle-free at our clean and secure locations.
                         </p>
 
                         <ul class="space-y-2 mb-6">
                             <li class="flex items-center gap-2 text-sm text-gray-600">
                                 <i class='bx bx-check text-emerald-600 text-[1.2rem]'></i>
-                                Smart scheduled pickups
+                                No sorting required
                             </li>
                             <li class="flex items-center gap-2 text-sm text-gray-600">
                                 <i class='bx bx-check text-emerald-600 text-[1.2rem]'></i>
-                                Zone-based routing system
+                                Secure smart access (QR-based)
                             </li>
                             <li class="flex items-center gap-2 text-sm text-gray-600">
                                 <i class='bx bx-check text-emerald-600 text-[1.2rem]'></i>
-                                Real-time pickup tracking
+                                Flexible subscription plans
                             </li>
                         </ul>
 
                         <button
                             class="w-full bg-emerald-50 text-emerald-700 px-6 py-3 rounded-xl font-medium hover:bg-emerald-500 hover:text-white transition-all ease-in duration-150 cursor-pointer">
-                            Start Subscription
+                            Join Membership
                         </button>
                     </div>
                 </div>
 
-                <!-- Service 2 - Professional Sorting -->
+                <!-- Service 2 - Centralized Waste Processing -->
                 <div data-aos="fade-up" data-aos-delay="400">
                     <div
                         class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition-all ease-in duration-150 group h-full flex flex-col justify-between hover:border-emerald-500">
@@ -657,32 +711,34 @@
                         <div
                             class="w-16 h-16 bg-emerald-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-emerald-500 transition-all ease-in duration-150">
                             <i
-                                class='bx bxs-layer text-3xl text-emerald-600 group-hover:text-white transition-all ease-in duration-150'></i>
+                                class='bx bxs-factory text-3xl text-emerald-600 group-hover:text-white transition-all ease-in duration-150'></i>
                         </div>
 
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Professional Waste Sorting</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Centralized Waste Processing</h3>
                         <p class="text-gray-600 mb-6 leading-relaxed">
-                            All collected waste is professionally sorted at our recycling hubs for maximum recovery.
+                            Your waste is transported to our central warehouse to be sorted, cleaned, and processed into
+                            valuable
+                            industrial raw materials instead of ending up in landfills.
                         </p>
 
                         <ul class="space-y-2 mb-6">
                             <li class="flex items-center gap-2 text-sm text-gray-600">
                                 <i class='bx bx-check text-emerald-600 text-[1.2rem]'></i>
-                                Manual + semi-automatic sorting
+                                100% diverted from landfill
                             </li>
                             <li class="flex items-center gap-2 text-sm text-gray-600">
                                 <i class='bx bx-check text-emerald-600 text-[1.2rem]'></i>
-                                Plastic, paper, metal separation
+                                Organic waste to feed or fertilizer
                             </li>
                             <li class="flex items-center gap-2 text-sm text-gray-600">
                                 <i class='bx bx-check text-emerald-600 text-[1.2rem]'></i>
-                                Environmental compliance
+                                Plastic processed into industrial raw materials
                             </li>
                         </ul>
 
                         <button
                             class="w-full bg-emerald-50 text-emerald-700 px-6 py-3 rounded-xl font-medium hover:bg-emerald-500 hover:text-white transition-all ease-in duration-150 cursor-pointer">
-                            Learn How It Works
+                            See Our Impact
                         </button>
                     </div>
                 </div>
@@ -698,34 +754,37 @@
                                 class='bx bxs-bolt text-3xl text-emerald-600 group-hover:text-white transition-all ease-in duration-150'></i>
                         </div>
 
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Express Pickup</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Express Pickup (On-Demand)</h3>
                         <p class="text-gray-600 mb-6 leading-relaxed">
-                            Need urgent waste collection? Request an instant pickup and we’ll arrive within hours.
+                            Too much trash from a party or moving out? Our on-demand fleet will pick up large volumes of
+                            waste
+                            directly from your doorstep.
                         </p>
 
                         <ul class="space-y-2 mb-6">
                             <li class="flex items-center gap-2 text-sm text-gray-600">
                                 <i class='bx bx-check text-emerald-600 text-[1.2rem]'></i>
-                                On-demand service
+                                3-hour rapid response
                             </li>
                             <li class="flex items-center gap-2 text-sm text-gray-600">
                                 <i class='bx bx-check text-emerald-600 text-[1.2rem]'></i>
-                                Arrival within 3 hours
+                                High volume capacity
                             </li>
                             <li class="flex items-center gap-2 text-sm text-gray-600">
                                 <i class='bx bx-check text-emerald-600 text-[1.2rem]'></i>
-                                Instant online checkout
+                                Flat rate fee
                             </li>
                         </ul>
 
                         <button
                             class="w-full bg-emerald-50 text-emerald-700 px-6 py-3 rounded-xl font-medium hover:bg-emerald-500 hover:text-white transition-all ease-in duration-150 cursor-pointer">
-                            Request Now
+                            Request Pickup
                         </button>
                     </div>
                 </div>
 
             </div>
+
         </div>
     </section>
 
