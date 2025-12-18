@@ -979,185 +979,113 @@
             </div>
 
             <!-- Filter Tabs -->
-            <div class="flex flex-wrap justify-center gap-3 mb-12 overflow-hidden">
-                <div data-aos="fade-up" data-aos-delay="600">
-                    <button
-                        class="px-6 py-2.5 bg-emerald-500 text-white rounded-xl font-medium hover:bg-emerald-600 transition-all ease-in text-sm cursor-pointer">
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+
+                <div class="flex flex-wrap justify-center gap-3" id="filterBtnContainer" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <button data-filter="all"
+                        class="filter-btn active px-6 py-2.5 rounded-xl font-medium transition-all duration-300 text-sm cursor-pointer bg-emerald-500 text-white shadow-md hover:shadow-lg hover:-translate-y-0.5">
                         All Products
                     </button>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="800">
-                    <button
-                        class="px-6 py-2.5 bg-white border border-gray-200 text-gray-700 rounded-xl font-medium hover:border-emerald-500 hover:text-emerald-500 transition-all ease-in text-sm cursor-pointer">
-                        Bags & Accessories
+                    <button data-filter="organic"
+                        class="filter-btn px-6 py-2.5 rounded-xl font-medium transition-all duration-300 text-sm cursor-pointer bg-white border border-gray-200 text-gray-600 hover:border-emerald-500 hover:text-emerald-500 hover:-translate-y-0.5">
+                        Organic
                     </button>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="1000">
-                    <button
-                        class="px-6 py-2.5 bg-white border border-gray-200 text-gray-700 rounded-xl font-medium hover:border-emerald-500 hover:text-emerald-500 transition-all ease-in text-sm cursor-pointer">
-                        Home & Living
-                    </button>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="1200">
-                    <button
-                        class="px-6 py-2.5 bg-white border border-gray-200 text-gray-700 rounded-xl font-medium hover:border-emerald-500 hover:text-emerald-500 transition-all ease-in text-sm cursor-pointer">
-                        Office & Stationery
+                    <button data-filter="inorganic"
+                        class="filter-btn px-6 py-2.5 rounded-xl font-medium transition-all duration-300 text-sm cursor-pointer bg-white border border-gray-200 text-gray-600 hover:border-emerald-500 hover:text-emerald-500 hover:-translate-y-0.5">
+                        Inorganic
                     </button>
                 </div>
             </div>
 
             <!-- Products Grid -->
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
 
-                <!-- Product 1 -->
-                <div data-aos="fade-up" data-aos-delay="200">
-                    <a href="#"
-                        class="w-full inline-block bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-xl transition-all ease-in hover:border-emerald-500">
-                        <div class="relative overflow-hidden bg-gray-100 h-64">
-                            <div class="absolute inset-0">
-                                <img src="img/eco-tote-bag.jpg" alt="Eco Tote Bag"
-                                    class="w-full h-full object-cover group-hover:scale-110 transform transition-all ease-in duration-250">
-                            </div>
-                            <div
-                                class="absolute top-3 right-3 bg-emerald-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                                Best Seller
-                            </div>
+            <div id="productsGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+
+                <div class="product-item group h-full" data-category="inorganic" data-aos="fade-up">
+                    <div
+                        class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full hover:border-emerald-400">
+                        <div class="relative h-56 overflow-hidden bg-gray-100">
+                            <img src="/img/eco-tote-bag.jpg" alt="Eco Tote Bag"
+                                class="w-full h-full object-cover bg-bottom transform group-hover:scale-110 transition-transform duration-500">
+                            <span
+                                class="absolute top-3 right-3 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">Best
+                                Seller</span>
                         </div>
-                        <div class="p-5">
-                            <div class="flex items-center gap-1 mb-2">
-                                <i class='bx bxs-star text-yellow-400'></i>
-                                <i class='bx bxs-star text-yellow-400'></i>
-                                <i class='bx bxs-star text-yellow-400'></i>
-                                <i class='bx bxs-star text-yellow-400'></i>
-                                <i class='bx bxs-star text-yellow-400'></i>
-                                <span class="text-xs text-gray-500 ml-1">(128)</span>
-                            </div>
-                            <h3 class="text-lg font-bold text-gray-900 mb-2">Eco Tote Bag</h3>
-                            <p class="text-sm text-gray-600 mb-3">
-                                Stylish tote bag crafted from recycled plastic bottles
-                            </p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xl font-bold text-emerald-600">Rp 125.000</span>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <h3 class="text-lg font-bold text-gray-900 mb-1">Eco Tote Bag</h3>
+                            <p class="text-sm text-gray-500 mb-4 flex-grow">Strong bag from recycled plastic.</p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-lg font-bold text-emerald-600">Rp 125.000</span>
                                 <button
-                                    class="bg-emerald-50 text-emerald-600 p-2.5 rounded-xl hover:bg-emerald-500 hover:text-white transition-all ease-in cursor-pointer">
-                                    <i class='bx bxs-basket text-2xl'></i>
-                                </button>
+                                    class="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-colors"><i
+                                        class='bx bxs-cart-add text-xl'></i></button>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
 
-                <!-- Product 2 -->
-                <div data-aos="fade-up" data-aos-delay="300">
-                    <a href="#"
-                        class="w-full inline-block bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-xl transition-all ease-in hover:border-emerald-500">
-                        <div class="relative overflow-hidden bg-gray-100 h-64">
-                            <div class="absolute inset-0">
-                                <img src="img/recycled-notebook.jpg" alt="Recycled Notebook"
-                                    class="w-full h-full object-cover group-hover:scale-110 transform transition-all ease-in duration-250">
-                            </div>
-                            <div
-                                class="absolute top-3 right-3 bg-orange-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                                New
-                            </div>
+                <div class="product-item group h-full" data-category="organic" data-aos="fade-up">
+                    <div
+                        class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full hover:border-emerald-400">
+                        <div class="relative h-56 overflow-hidden bg-gray-100">
+                            <img src="/img/organic-compost.png" alt="Compost"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                            <span
+                                class="absolute top-3 right-3 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">New</span>
                         </div>
-                        <div class="p-5">
-                            <div class="flex items-center gap-1 mb-2">
-                                <i class='bx bxs-star text-yellow-400'></i>
-                                <i class='bx bxs-star text-yellow-400'></i>
-                                <i class='bx bxs-star text-yellow-400'></i>
-                                <i class='bx bxs-star text-yellow-400'></i>
-                                <i class='bx bxs-star text-gray-300'></i>
-                                <span class="text-xs text-gray-500 ml-1">(45)</span>
-                            </div>
-                            <h3 class="text-lg font-bold text-gray-900 mb-2">Recycled Notebook</h3>
-                            <p class="text-sm text-gray-600 mb-3">
-                                Premium notebook made from 100% recycled paper
-                            </p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xl font-bold text-emerald-600">Rp 45.000</span>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <h3 class="text-lg font-bold text-gray-900 mb-1">Organic Compost</h3>
+                            <p class="text-sm text-gray-500 mb-4 flex-grow">Nutrient-rich fertilizer.</p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-lg font-bold text-emerald-600">Rp 45.000</span>
                                 <button
-                                    class="bg-emerald-50 text-emerald-600 p-2.5 rounded-xl hover:bg-emerald-500 hover:text-white transition-all ease-in cursor-pointer">
-                                    <i class='bx bxs-basket text-2xl'></i>
-                                </button>
+                                    class="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-colors"><i
+                                        class='bx bxs-cart-add text-xl'></i></button>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
 
-                <!-- Product 3 -->
-                <div data-aos="fade-up" data-aos-delay="400">
-                    <a href="#"
-                        class="w-full inline-block bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-xl transition-all ease-in hover:border-emerald-500">
-                        <div class="relative overflow-hidden bg-gray-100 h-64">
-                            <div class="absolute inset-0">
-                                <img src="img/eco-planter-pot.jpg" alt="Eco Planter Pot"
-                                    class="w-full h-full object-cover group-hover:scale-110 transform transition-all ease-in duration-250">
-                            </div>
+                <div class="product-item group h-full" data-category="inorganic" data-aos="fade-up">
+                    <div
+                        class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full hover:border-emerald-400">
+                        <div class="relative h-56 overflow-hidden bg-gray-100">
+                            <img src="/img/eco-planter-pot.jpg" alt="Planter"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
                         </div>
-                        <div class="p-5">
-                            <div class="flex items-center gap-1 mb-2">
-                                <i class='bx bxs-star text-yellow-400'></i>
-                                <i class='bx bxs-star text-yellow-400'></i>
-                                <i class='bx bxs-star text-yellow-400'></i>
-                                <i class='bx bxs-star text-yellow-400'></i>
-                                <i class='bx bxs-star text-yellow-400'></i>
-                                <span class="text-xs text-gray-500 ml-1">(92)</span>
-                            </div>
-                            <h3 class="text-lg font-bold text-gray-900 mb-2">Eco Planter Pot</h3>
-                            <p class="text-sm text-gray-600 mb-3">
-                                Minimalist planter made from mixed recycled materials
-                            </p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xl font-bold text-emerald-600">Rp 85.000</span>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <h3 class="text-lg font-bold text-gray-900 mb-1">Recycled Planter</h3>
+                            <p class="text-sm text-gray-500 mb-4 flex-grow">Minimalist and durable pot.</p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-lg font-bold text-emerald-600">Rp 25.000</span>
                                 <button
-                                    class="bg-emerald-50 text-emerald-600 p-2.5 rounded-xl hover:bg-emerald-500 hover:text-white transition-all ease-in cursor-pointer">
-                                    <i class='bx bxs-basket text-2xl'></i>
-                                </button>
+                                    class="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-colors"><i
+                                        class='bx bxs-cart-add text-xl'></i></button>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
 
-                <!-- Product 4 -->
-                <div data-aos="fade-up" data-aos-delay="500">
-                    <a href="#"
-                        class="w-full inline-block bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group hover:shadow-xl transition-all ease-in hover:border-emerald-500">
-                        <div class="relative overflow-hidden bg-gray-100 h-64">
-                            <div class="absolute inset-0">
-                                <img src="img/recycled-bookmark-set.jpg" alt="Recycled Bookmark Set"
-                                    class="w-full h-full object-contain group-hover:scale-110 transform transition-all ease-in duration-250">
-                            </div>
-                            <div
-                                class="absolute top-3 right-3 bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                                -20%
-                            </div>
+                <div class="product-item group h-full" data-category="organic" data-aos="fade-up">
+                    <div
+                        class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full hover:border-emerald-400">
+                        <div class="relative h-56 overflow-hidden bg-gray-100">
+                            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=600"
+                                alt="Notebook"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
                         </div>
-                        <div class="p-5">
-                            <div class="flex items-center gap-1 mb-2">
-                                <i class='bx bxs-star text-yellow-400'></i>
-                                <i class='bx bxs-star text-yellow-400'></i>
-                                <i class='bx bxs-star text-yellow-400'></i>
-                                <i class='bx bxs-star text-yellow-400'></i>
-                                <i class='bx bxs-star text-gray-300'></i>
-                                <span class="text-xs text-gray-500 ml-1">(67)</span>
-                            </div>
-                            <h3 class="text-lg font-bold text-gray-900 mb-2">Recycled Bookmark Set</h3>
-                            <p class="text-sm text-gray-600 mb-3">
-                                Colorful bookmarks made from recycled cardboard
-                            </p>
-                            <div class="flex items-center justify-between">
-                                <div>
-                                    <span class="text-xl font-bold text-emerald-600">Rp 32.000</span>
-                                    <span class="text-sm text-gray-400 line-through ml-2">Rp 40.000</span>
-                                </div>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <h3 class="text-lg font-bold text-gray-900 mb-1">Recycled Notebook</h3>
+                            <p class="text-sm text-gray-500 mb-4 flex-grow">Natural brown paper.</p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-lg font-bold text-emerald-600">Rp 35.000</span>
                                 <button
-                                    class="bg-emerald-50 text-emerald-600 p-2.5 rounded-xl hover:bg-emerald-500 hover:text-white transition-all ease-in cursor-pointer">
-                                    <i class='bx bxs-basket text-2xl'></i>
-                                </button>
+                                    class="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-colors"><i
+                                        class='bx bxs-cart-add text-xl'></i></button>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
 
@@ -1423,6 +1351,7 @@
 
     <!-- Mobile Navbar JS -->
     <script src="js/mobile-navbar.js"></script>
+    <script src="js/filter-tabs.js"></script>
 </body>
 
 </html>
